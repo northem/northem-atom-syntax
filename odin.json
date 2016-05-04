@@ -1,7 +1,7 @@
 {
   "id": "northem-atom-syntax",
   "name": "Northem - Atom Syntax",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "date": {
    "created": "2015-03-15 20:17 UTC+0100",
    "updated": "2016-04-12 13:33 UTC+0200"
@@ -37,7 +37,7 @@
     {"id": "arcver","version": "0.8.0","manager": "odin"}
   ],
   "dependencies": [
-    {"id": "northem","version": "1.0.1","manager": "odin"}
+    {"id": "northem","version": "1.0.0","manager": "odin"}
   ],
   "devDependencies": [
     {"id": "glacier-git","version": "0.21.0","manager": "odin"}
