@@ -35,6 +35,7 @@ Visit the [official website](http://arcticicestudio.com/northem) (actually under
   - <a href="https://atom.io/packages/language-d"><img src="https://avatars0.githubusercontent.com/u/768741" width=16 height=16/> D</a>
   - <a href="https://atom.io/packages/language-generic-config"><img src="https://avatars1.githubusercontent.com/u/1038121" alt="C logo" width=16 height=16/> Generic Config (dotfiles)</a>
   - <a href="https://atom.io/packages/language-git"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> git</a>
+  - <a href="https://atom.io/packages/language-go"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> Go</a>
   - <a href="https://atom.io/packages/language-glsl"><img src="https://avatars3.githubusercontent.com/u/569817" width=16 height=16/> GLSL</a>
   - <a href="https://atom.io/packages/git-diff"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> diff</a>
   - <a href="https://atom.io/packages/language-haml"><img src="https://avatars0.githubusercontent.com/u/6979737" width=16 height=16/> HAML</a>
