@@ -87,7 +87,7 @@ apm install northem-atom-syntax
 Visit the [official website](http://arcticicestudio.com/northem) for more information.
 
 ## Development
-[![](https://img.shields.io/badge/Changelog-v0.20.0-blue.svg)](https://github.com/arcticicestudio/northem-atom-syntax/blob/v0.20.0/CHANGELOG.md)
+[![](https://img.shields.io/badge/Changelog-v0.21.0-blue.svg)](https://github.com/arcticicestudio/northem-atom-syntax/blob/v0.21.0/CHANGELOG.md)
 
 ### Workflow
 This project follows the [gitflow](http://nvie.com/posts/a-successful-git-branching-model) branching model.
