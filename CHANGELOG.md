@@ -1,5 +1,4 @@
-Northem - Atom Syntax
-=====================
+<img align="center" src="https://raw.githubusercontent.com/arcticicestudio/northem-atom-syntax/develop/assets/media/northem-atom-syntax-banner.png" alt="Northem Atom Syntax"/> <a href="http://arcticicestudio.com/northem">
 
 ## 0.20.0 (2016-05-04)
 ### Features
