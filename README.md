@@ -59,6 +59,7 @@ Visit the [official website](http://arcticicestudio.com/northem) (actually under
   - <a href="https://atom.io/packages/react"><img src="https://avatars2.githubusercontent.com/u/606347" width=16 height=16/> React JSX</a>
   - <a href="https://atom.io/packages/language-ruby"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> Ruby</a>
   - <a href="https://atom.io/packages/language-sass"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> SASS</a>
+  - <a href="https://atom.io/packages/language-scala"><img src="https://avatars0.githubusercontent.com/u/9948688" width=16 height=16/> Scala</a>
   - <a href="https://atom.io/packages/language-shellscript"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> Shell</a>
   - <a href="https://atom.io/packages/language-sql"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> SQL</a>
   - <a href="https://atom.io/packages/language-xml"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> XML</a>
