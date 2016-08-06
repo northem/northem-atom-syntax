@@ -3,13 +3,13 @@
 title     Index                           +
 project   northem-atom-syntax             +
 file      index.less                      +
-version   0.20.0                          +
+version   0.21.0                          +
 author    Arctic Ice Studio               +
 email     development@arcticicestudio.com +
 website   http://arcticicestudio.com      +
 copyright Copyright (C) 2016              +
 created   2015-03-15 20:17 UTC+0100       +
-modified  2016-05-04 09:23 UTC+0200       +
+modified  2016-06-17 10:38 UTC+0200       +
 +++++++++++++++++++++++++++++++++++++++++++
 
 [Description]
@@ -48,6 +48,7 @@ Visit the official website http://arcticicestudio.com/northem (actually under co
   - D               (https://atom.io/packages/language-d)
   - Generic Config  (https://atom.io/packages/language-generic-config)
   - git             (https://atom.io/packages/language-git)
+  - Go              (https://atom.io/packages/language-go)
   - GLSL            (https://atom.io/packages/language-glsl)
   - diff            (https://atom.io/packages/git-diff)
   - HAML            (https://atom.io/packages/language-haml)
@@ -60,9 +61,11 @@ Visit the official website http://arcticicestudio.com/northem (actually under co
   - JSON            (https://atom.io/packages/language-json)
   - LaTeX           (https://atom.io/packages/language-latex)
   - LESSCSS         (https://atom.io/packages/language-lesss)
+  - Make            (https://atom.io/packages/language-make)
   - Markdown        (https://atom.io/packages/language-gfm)
   - MJML            (https://atom.io/packages/language-mjml)
   - Mustache        (https://atom.io/packages/language-mustache)
+  - Nunjucks        (https://atom.io/packages/language-nunjucks)
   - PHP             (https://atom.io/packages/language-php)
   - PropertyList    (https://atom.io/packages/language-property-list)
   - Python          (https://atom.io/packages/language-python)
@@ -70,6 +73,7 @@ Visit the official website http://arcticicestudio.com/northem (actually under co
   - React JSX       (https://atom.io/packages/react)
   - Ruby            (https://atom.io/packages/language-ruby)
   - SASS            (https://atom.io/packages/language-sass)
+  - Scala           (https://atom.io/packages/language-scala)
   - Shell           (https://atom.io/packages/language-shellscript)
   - SQL             (https://atom.io/packages/language-sql)
   - XML             (https://atom.io/packages/language-xml)
@@ -84,7 +88,7 @@ Visit the official website http://arcticicestudio.com/northem (actually under co
   - minimap-git-diff@^4.2.0           (https://atom.io/packages/minimap-git-diff)
 
 [Version]
-0.20.0 (https://github.com/arcticicestudio/northem-atom-syntax/releases/latest)
+0.21.0 (https://github.com/arcticicestudio/northem-atom-syntax/releases/latest)
 
 For older versions check out the GitHub Repository (https://github.com/arcticicestudio/northem-atom-syntax)
 and http://arcticicestudio.com/northem (actually under construction).
@@ -193,6 +197,7 @@ Glacier - Git
 @import "./styles/languages/generic-config.less";
 @import "./styles/languages/gfm.less";
 @import "./styles/languages/git.less";
+@import "./styles/languages/go.less";
 @import "./styles/languages/glsl.less";
 @import "./styles/languages/haml.less";
 @import "./styles/languages/haskell.less";
@@ -205,7 +210,9 @@ Glacier - Git
 @import "./styles/languages/julia.less";
 @import "./styles/languages/latex.less";
 @import "./styles/languages/lesscss.less";
+@import "./styles/languages/make.less";
 @import "./styles/languages/mustache.less";
+@import "./styles/languages/nunjucks.less";
 @import "./styles/languages/php.less";
 @import "./styles/languages/property-list.less";
 @import "./styles/languages/python.less";
@@ -213,6 +220,7 @@ Glacier - Git
 @import "./styles/languages/r.less";
 @import "./styles/languages/ruby.less";
 @import "./styles/languages/sass.less";
+@import "./styles/languages/scala.less";
 @import "./styles/languages/shellscript.less";
 @import "./styles/languages/sql.less";
 @import "./styles/languages/xml.less";

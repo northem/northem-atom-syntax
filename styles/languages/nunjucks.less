@@ -1,30 +1,31 @@
 /*
-+++++++++++++++++++++++++++++++++++++++++++++++
-title     Language "GitHub Flavored Markdown" +
-project   northem-atom-syntax                 +
-file      gfm.less                            +
-version   0.21.0                              +
-author    Arctic Ice Studio                   +
-email     development@arcticicestudio.com     +
-website   http://arcticicestudio.com          +
-copyright Copyright (C) 2015-2016             +
-created   2015-03-15 20:17 UTC+0100           +
-modified  2016-01-30 18:03 UTC+0100           +
-+++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++
+title     Language Nunjucks               +
+project   northem-atom-syntax             +
+file      nunjucks.less                   +
+version   0.21.0                          +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2016-06-17 08:36 UTC+0200       +
+modified  2016-06-17 10:35 UTC+0200       +
++++++++++++++++++++++++++++++++++++++++++++
 
 [Description]
-This file defines all language specific syntax highlighting classes for GitHub Flavored Markdown.
+This file defines all language specific syntax highlighting classes for Nunjucks.
 
 [Index]
   (1) Comment
-  (2) Entity
-  (3) Markup
-  (4) Punctuation
-  (5) Support
-  (6) Variable
+  (2) Constant
+  (3) Entity
+  (4) Keyword
+  (5) Punctuation
+  (6) String
+  (7) Variable
 
 [Dependencies]
-  - language-gfm@^0.82.0 (https://atom.io/packages/language-gfm) by "atom" (https://atom.io/users/atom)
+  - language-nunjucks@4.0.0 (https://atom.io/packages/language-nunjucks) by "alohaas" (https://atom.io/users/alohaas)
 
 [Copyright]
 Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
@@ -43,95 +44,81 @@ LESSCSS
 Arctic Versioning Specification (ArcVer)
   (http://specs.arcticicestudio.com/arcver)
 */
-.source.gfm {
-  color: @color-editor-text;
-  -webkit-font-smoothing: auto;
+.source.nunjucks,
+.text.html.nunjucks {
+  color: @color-syntax-other;
   /* +----------------------------------------------------------------------------+
      + Comment                                                                [1] +
      +----------------------------------------------------------------------------+ */
   .comment {
-    &.quote {
-      color: @color-editor-text;
-      font-style: italic;
-    }
-    &.hr {
-      color: @color-syntax-class;
-    }
+    color: @color-syntax-comment;
   }
   /* +------------------------------------------------------------------------[1]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Enity                                                                  [2] +
+     + Constant                                                               [2] +
      +----------------------------------------------------------------------------+ */
-  .entity {
-    color: @color-syntax-keyword;
+  .constant.character.entity {
+    color: @color-syntax-html-entity;
   }
   /* +------------------------------------------------------------------------[2]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Markup                                                                 [3] +
+     + Entity                                                                 [3] +
      +----------------------------------------------------------------------------+ */
-  .markup {
-    &.heading {
-      color: @color-syntax-keyword;
+  .entity.other.nunjucks.delimiter {
+    &.tag {
+      color: @color-syntax-nunjucks-tag;
       font-weight: bold;
     }
-    &.underline {
-      text-decoration: underline;
-
-      &.link {
-        color: @color-syntax-markdown-link;
-      }
-    }
-    &.bold,
-    &.italic {
-      color: @color-syntax-string;
-    }
-    &.raw {
-      color: @color-syntax-keyword;
-      font-style: italic;
-    }
-    &.changed {
-      color: @color-git-diff-modified;
-    }
-    &.deleted {
-      color: @color-git-diff-removed;
+    &.variable {
+      font-weight: bold;
     }
   }
   /* +------------------------------------------------------------------------[3]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Punctuation                                                            [4] +
+     + Keyword                                                                [4] +
      +----------------------------------------------------------------------------+ */
-  .punctation {
-    &.definition.begin,
-    &.definition.end,
-    &.seperator {
-      color: @color-syntax-symbol;
+  .keyword {
+    &.control {
+      color: @color-syntax-keyword;
+    }
+    &.operator {
+      &.arithmetic,
+      &.comparison {
+        color: @color-syntax-operator;
+      }
     }
   }
   /* +------------------------------------------------------------------------[4]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Support                                                                [5] +
+     + Punctuation                                                            [5] +
      +----------------------------------------------------------------------------+ */
-  .support {
-    color: @color-syntax-markdown-code;
-
-    &.quote {
-      color: @color-syntax-class;
+  .punctuation {
+    &.other {
+      color: @color-syntax-symbol;
+    }
+    &.definition.entity {
+      color: @color-syntax-keyword;
     }
   }
   /* +------------------------------------------------------------------------[5]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Variable                                                               [6] +
+     + String                                                                 [6] +
      +----------------------------------------------------------------------------+ */
-  .variable {
-    &.unordered.list,
-    &.ordered.list {
-      color: @color-syntax-class;
-    }
+  .string.quoted {
+    color: @color-syntax-string;
   }
   /* +------------------------------------------------------------------------[6]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + Variable                                                               [7] +
+     +----------------------------------------------------------------------------+ */
+  .variable {
+    color: @color-syntax-variable;
+  }
+  /* +------------------------------------------------------------------------[7]-+ */
 }

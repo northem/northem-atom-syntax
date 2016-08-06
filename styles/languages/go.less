@@ -1,34 +1,33 @@
 /*
 +++++++++++++++++++++++++++++++++++++++++++
-title     Language "CoffeeScript"         +
+title     Language Go                     +
 project   northem-atom-syntax             +
-file      coffeescript.less               +
+file      go.less                         +
 version   0.21.0                          +
 author    Arctic Ice Studio               +
 email     development@arcticicestudio.com +
 website   http://arcticicestudio.com      +
 copyright Copyright (C) 2015-2016         +
-created   2015-04-28 16:20 UTC+0100       +
-modified  2016-02-01 20:08 UTC+0100       +
+created   2016-06-06 13:40 UTC+0200       +
+modified  2016-06-06 14:19 UTC+0200       +
 +++++++++++++++++++++++++++++++++++++++++++
 
 [Description]
-This file defines all language specific syntax highlighting classes for CoffeeScript.
+This file defines all language specific syntax highlighting classes for Go.
 
 [Index]
   (1) Comment
   (2) Constant
   (3) Entity
   (4) Keyword
-  (5) Meta
-  (6) Punctuation
-  (7) Support
-  (8) Storage
-  (9) String
-  (10) Variable
+  (5) Punctuation
+  (6) Support
+  (7) Storage
+  (8) String
+  (9) Variable
 
 [Dependencies]
-  - language-coffee-script@^0.46.0 (https://atom.io/packages/language-coffee-script) by "atom" (https://atom.io/users/atom)
+  - language-go@0.42.0 (https://atom.io/packages/language-go) by "atom" (https://atom.io/users/atom)
 
 [Copyright]
 Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
@@ -47,7 +46,7 @@ LESSCSS
 Arctic Versioning Specification (ArcVer)
   (http://specs.arcticicestudio.com/arcver)
 */
-.source.coffee {
+.source.go {
   color: @color-syntax-other;
   /* +----------------------------------------------------------------------------+
      + Comment                                                                [1] +
@@ -61,31 +60,27 @@ Arctic Versioning Specification (ArcVer)
      + Constant                                                               [2] +
      +----------------------------------------------------------------------------+ */
   .constant {
+    &.character.escape {
+      color: @color-syntax-escape;
+    }
+    &.other.placeholder {
+      color: @color-syntax-string;
+      font-style: italic;
+    }
+    &.language {
+      color: @color-syntax-keyword;
+    }
     &.numeric {
       color: @color-syntax-number;
-    }
-    &.character.escape,
-    &.other.character-class.set.regexp {
-      color: @color-syntax-regexp;
     }
   }
   /* +------------------------------------------------------------------------[2]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Enity                                                                  [3] +
+     + Entity                                                                 [3] +
      +----------------------------------------------------------------------------+ */
-  .entity {
-    &.name {
-      &.function {
-        color: @color-syntax-function;
-      }
-      &.class {
-        color: @color-syntax-class;
-      }
-    }
-    &.other.inherited-class {
-      color: @color-syntax-class;
-    }
+  .entity.name.function {
+    color: @color-syntax-function;
   }
   /* +------------------------------------------------------------------------[3]-+ */
 
@@ -93,8 +88,12 @@ Arctic Versioning Specification (ArcVer)
      + Keyword                                                                [4] +
      +----------------------------------------------------------------------------+ */
   .keyword {
-    &.control {
-      color: @color-syntax-keyword;
+    color: @color-syntax-keyword;
+
+    &.package,
+    &.import {
+      color: @color-syntax-import;
+      font-weight: bold;
     }
     &.operator {
       color: @color-syntax-operator;
@@ -103,90 +102,58 @@ Arctic Versioning Specification (ArcVer)
   /* +------------------------------------------------------------------------[4]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Meta                                                                   [5] +
+     + Punctuation                                                            [5] +
      +----------------------------------------------------------------------------+ */
-  .meta {
-    &.brace.round,
-    &.brace.curly,
-    &.delimeter.object.comma {
-      color: @color-syntax-symbol;
+  .punctuation {
+    &.definition.string {
+      &.begin,
+      &.end {
+        color: @color-syntax-symbol;
+      }
     }
-    &.group.regexp {
-      color: @color-syntax-regexp;
+    &.other {
+      &.bracket,
+      &.comma,
+      &.period {
+        color: @color-syntax-symbol;
+      }
     }
   }
   /* +------------------------------------------------------------------------[5]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Punctuation                                                            [6] +
+     + Support                                                                [6] +
      +----------------------------------------------------------------------------+ */
-  .punctuation {
-    &.definition {
-      &.comment {
-        color: @color-syntax-comment;
-      }
-      &.string {
-        &.begin,
-        &.end {
-          color: @color-syntax-symbol;
-        }
-      }
-      &.character-class.regexp,
-      &.group.regexp {
-        color: @color-syntax-keyword;
-      }
-    }
-    &.section.embedded,
-    &.terminator,
-    &.seperator {
-      color: @color-syntax-symbol;
-    }
+  .support.function {
+    color: @color-syntax-function;
   }
   /* +------------------------------------------------------------------------[6]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Support                                                                [7] +
+     + Storage                                                                [7] +
      +----------------------------------------------------------------------------+ */
-  .support {
-    &.class {
-      color: @color-syntax-class;
-    }
-    &.function {
-      color: @color-syntax-function;
+  .storage.type {
+    color: @color-syntax-class;
+
+    &.class.todo {
+      color: @color-syntax-go-todo;
     }
   }
   /* +------------------------------------------------------------------------[7]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Storage                                                                [8] +
-     +----------------------------------------------------------------------------+ */
-  .storage.type {
-    &.function,
-    &.class {
-      color: @color-syntax-keyword;
-    }
-  }
-  /* +------------------------------------------------------------------------[8]-+ */
-
-  /* +----------------------------------------------------------------------------+
-     + String                                                                 [9] +
+     + String                                                                 [8] +
      +----------------------------------------------------------------------------+ */
   .string.quoted {
     color: @color-syntax-string;
   }
-  /* +------------------------------------------------------------------------[9]-+ */
+  /* +------------------------------------------------------------------------[8]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Variable                                                              [10] +
+     + Variable                                                               [9] +
      +----------------------------------------------------------------------------+ */
-  .variable {
-    &.assignment,
-    &.parameter.function {
-      color: @color-syntax-variable;
-    }
-    &.other.readwrite.instance {
-      color: @color-syntax-javascript-instance;
-    }
+  .variable.other {
+    color: @color-syntax-variable;
   }
-  /* +-----------------------------------------------------------------------[10]-+ */
+  /* +------------------------------------------------------------------------[9]-+ */
 }

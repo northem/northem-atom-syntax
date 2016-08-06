@@ -1,30 +1,31 @@
 /*
-+++++++++++++++++++++++++++++++++++++++++++++++
-title     Language "GitHub Flavored Markdown" +
-project   northem-atom-syntax                 +
-file      gfm.less                            +
-version   0.21.0                              +
-author    Arctic Ice Studio                   +
-email     development@arcticicestudio.com     +
-website   http://arcticicestudio.com          +
-copyright Copyright (C) 2015-2016             +
-created   2015-03-15 20:17 UTC+0100           +
-modified  2016-01-30 18:03 UTC+0100           +
-+++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++
+title     Language Make                   +
+project   northem-atom-syntax             +
+file      make.less                       +
+version   0.21.0                          +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2016-06-13 15:14 UTC+0200       +
+modified  2016-06-13 09:25 UTC+0200       +
++++++++++++++++++++++++++++++++++++++++++++
 
 [Description]
-This file defines all language specific syntax highlighting classes for GitHub Flavored Markdown.
+This file defines all language specific syntax highlighting classes for Make.
 
 [Index]
   (1) Comment
-  (2) Entity
-  (3) Markup
+  (2) Constant
+  (3) Keyword
   (4) Punctuation
   (5) Support
-  (6) Variable
+  (6) String
+  (7) Variable
 
 [Dependencies]
-  - language-gfm@^0.82.0 (https://atom.io/packages/language-gfm) by "atom" (https://atom.io/users/atom)
+  - language-make@0.21.0 (https://atom.io/packages/language-make) by "atom" (https://atom.io/users/atom)
 
 [Copyright]
 Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
@@ -43,71 +44,44 @@ LESSCSS
 Arctic Versioning Specification (ArcVer)
   (http://specs.arcticicestudio.com/arcver)
 */
-.source.gfm {
-  color: @color-editor-text;
-  -webkit-font-smoothing: auto;
+.source.makefile {
+  color: @color-syntax-other;
   /* +----------------------------------------------------------------------------+
      + Comment                                                                [1] +
      +----------------------------------------------------------------------------+ */
   .comment {
-    &.quote {
-      color: @color-editor-text;
-      font-style: italic;
-    }
-    &.hr {
-      color: @color-syntax-class;
-    }
+    color: @color-syntax-comment;
   }
   /* +------------------------------------------------------------------------[1]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Enity                                                                  [2] +
+     + Constant                                                               [2] +
      +----------------------------------------------------------------------------+ */
-  .entity {
-    color: @color-syntax-keyword;
+  .constant {
+    &.other.placeholder {
+      color: @color-syntax-operator;
+    }
+    &.character.escape {
+      color: @color-syntax-escape;
+    }
   }
   /* +------------------------------------------------------------------------[2]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Markup                                                                 [3] +
+     + Keyword                                                                [3] +
      +----------------------------------------------------------------------------+ */
-  .markup {
-    &.heading {
-      color: @color-syntax-keyword;
-      font-weight: bold;
-    }
-    &.underline {
-      text-decoration: underline;
-
-      &.link {
-        color: @color-syntax-markdown-link;
-      }
-    }
-    &.bold,
-    &.italic {
-      color: @color-syntax-string;
-    }
-    &.raw {
-      color: @color-syntax-keyword;
-      font-style: italic;
-    }
-    &.changed {
-      color: @color-git-diff-modified;
-    }
-    &.deleted {
-      color: @color-git-diff-removed;
-    }
+  .keyword.control {
+    color: @color-syntax-keyword;
   }
   /* +------------------------------------------------------------------------[3]-+ */
 
   /* +----------------------------------------------------------------------------+
      + Punctuation                                                            [4] +
      +----------------------------------------------------------------------------+ */
-  .punctation {
-    &.definition.begin,
-    &.definition.end,
-    &.seperator {
-      color: @color-syntax-symbol;
+  .punctuation {
+    &.separator.key-value,
+    &.definition.variable {
+      color: @color-syntax-operator;
     }
   }
   /* +------------------------------------------------------------------------[4]-+ */
@@ -115,23 +89,33 @@ Arctic Versioning Specification (ArcVer)
   /* +----------------------------------------------------------------------------+
      + Support                                                                [5] +
      +----------------------------------------------------------------------------+ */
-  .support {
-    color: @color-syntax-markdown-code;
+  .support.function {
+    color: @color-syntax-function;
 
-    &.quote {
-      color: @color-syntax-class;
+    &.builtin.shell {
+      font-style: italic;
     }
   }
   /* +------------------------------------------------------------------------[5]-+ */
 
   /* +----------------------------------------------------------------------------+
-     + Variable                                                               [6] +
+     + String                                                                 [6] +
      +----------------------------------------------------------------------------+ */
-  .variable {
-    &.unordered.list,
-    &.ordered.list {
-      color: @color-syntax-class;
-    }
+  .string {
+    color: @color-syntax-string;
   }
   /* +------------------------------------------------------------------------[6]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + Variable                                                               [7] +
+     +----------------------------------------------------------------------------+ */
+  .variable {
+    &.other {
+      color: @color-syntax-variable;
+    }
+    &.language {
+      color: @color-syntax-constant;
+    }
+  }
+  /* +------------------------------------------------------------------------[7]-+ */
 }
