@@ -1,4 +1,4 @@
-<img align="center" src="https://raw.githubusercontent.com/arcticicestudio/northem-atom-syntax/develop/assets/media/northem-atom-syntax-banner.png" alt="Northem Atom Syntax"/> <a href="http://arcticicestudio.com/northem"><img align="right" src="https://raw.githubusercontent.com/arcticicestudio/northem-atom-syntax/develop/assets/media/northem-logo.png"/></a>
+<img src="https://raw.githubusercontent.com/arcticicestudio/northem-atom-syntax/develop/assets/media/northem-atom-syntax-banner.png" alt="Northem Atom Syntax"/>
 
 <img src="https://assets-cdn.github.com/favicon.ico" width=24 height=24/> [![release](https://img.shields.io/github/release/arcticicestudio/northem-atom-syntax.svg)](https://github.com/arcticicestudio/northem-atom-syntax/releases/latest) <img src="https://atom.io/favicon.ico" width=24 height=24/> [![apm](https://img.shields.io/apm/v/northem-atom-syntax.svg)](https://atom.io/themes/northem-atom-syntax) [![apm downloads](https://img.shields.io/apm/dm/northem-atom-syntax.svg)](https://atom.io/themes/northem-atom-syntax)
 
