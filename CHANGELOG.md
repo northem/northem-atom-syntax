@@ -1,5 +1,17 @@
 <img align="center" src="https://raw.githubusercontent.com/arcticicestudio/northem-atom-syntax/develop/assets/media/northem-atom-syntax-banner.png" alt="Northem Atom Syntax"/> <a href="http://arcticicestudio.com/northem">
 
+# 0.22.0 (2016-08-18)
+## Improvements
+### Language Support
+**JavaScript**  
+  - Removed a explicit keyword selector to allow syntax highlighting for all keywords
+
+**Nunjucks**  
+  - Better HTML syntax highlighting in Nunjucks files
+
+### Documentation
+  - Removed unnecessary comment-doc overhead like index numbering, section delimitation etc..
+
 # 0.21.0 (2016-08-06)
 ## Features
 ### Language Support
@@ -17,7 +29,7 @@ This version closes the backlog item
 
 ## Improvements
 ### Documentation
-  - The documentations have been modernized and the `README` now includes a "Getting started" section 
+  - The documentations have been modernized and the `README` now includes a "Getting started" section
 
 # 0.20.0 (2016-05-04)
 ## Features
