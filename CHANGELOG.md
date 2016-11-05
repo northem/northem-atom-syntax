@@ -1,4 +1,8 @@
-<img align="center" src="https://raw.githubusercontent.com/arcticicestudio/northem-atom-syntax/develop/assets/media/northem-atom-syntax-banner.png" alt="Northem Atom Syntax"/> <a href="http://arcticicestudio.com/northem">
+<p align="center"><img src="https://cdn.rawgit.com/arcticicestudio/northem-atom-syntax/develop/assets/northem-atom-syntax-banner.svg"/></p>
+
+<p align="center"><img src="https://assets-cdn.github.com/favicon.ico" width=24 height=24/> <a href="https://github.com/arcticicestudio/northem-atom-syntax/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/northem-atom-syntax.svg"/></a> <a href="https://github.com/arcticicestudio/northem/releases/tag/v2.0.0"><img src="https://img.shields.io/badge/Northem-v2.0.0-blue.svg"/></a> <img src="https://atom.io/favicon.ico" width=24 height=24/> <a href="https://atom.io/themes/northem-atom-syntax"><img src="https://img.shields.io/apm/v/northem-atom-syntax.svg"/></a> <a href="https://atom.io/themes/northem-atom-syntax"><img src="https://img.shields.io/apm/dm/northem-atom-syntax.svg"/></a></p>
+
+---
 
 # 0.22.0 (2016-08-18)
 ## Improvements
@@ -52,7 +56,7 @@ This version closes the backlog item
 This version closes the backlog items
   - [x] <img src="https://facebook.github.io/react/favicon.ico" width=16 height=16/> [React.js](https://atom.io/packages/react) (@Pszek, [GHI #3][ghi-northem-light-atom-syntax-3])
 
-# 0.18.0 (2016-04-10) - `apm` package reconstruction and reinitialization
+# 0.18.0 (2016-04-10)
 The project repository has been reconstructed and reinitialized for a clean migration to [gitflow](http://nvie.com/posts/a-successful-git-branching-model).  
 This is only relevant for the git history and does **NOT** impact the source code!
 
@@ -221,9 +225,11 @@ Better differentiation for `HTML` tags:
   - Implemented language support for [Julia](https://atom.io/packages/language-julia)
   - Implemented language support for [ShellScript](https://atom.io/packages/language-shellscript)
 
-# 0.1.0 (2016-04-10) - Project Reconstruction
+# 0.1.0 (2016-04-10)
+**Project Reconstruction**
 
-# 0.0.0 (2016-04-10) - Repository Reinitialization
+# 0.0.0 (2016-04-10)
+**Repository Reinitialization**
 
 [backlog-language-library-framework-support]: https://github.com/arcticicestudio/northem-atom-syntax/issues/2
 
