@@ -4,6 +4,26 @@
 
 ---
 
+# 2.0.0 (2016-11-10)
+**The whole project has been cleaned up and rewritten to adapt the codebase of the [Nord Atom Syntax](https://github.com/arcticicestudio/nord-atom-syntax) project!**
+*This closes the milestone [Version 2.0.0](https://github.com/arcticicestudio/northem-atom-syntax/milestone/2) and the associated backlog ticket #5.*
+
+## Features
+Detailed information about new features can be found in the [README](https://github.com/arcticicestudio/northem-atom-syntax/blob/develop/README.md#features) and the [Nord Atom Syntax](https://github.com/arcticicestudio/nord-atom-syntax#features) documentation!
+
+### Color Palette
+This major update has been migrated to the new Northem color palette version [`2.0.0`](https://github.com/arcticicestudio/northem/releases/tag/v2.0.0). (@arcticicestudio, #6, fff01790)
+
+### Design
+The old design was uncomfortable, inconsistent and has not been updated to the latest Atom version which resulted in unpredictable bugs and glitch due to changes of the Atom Core.
+Northem Atom Syntax has adapted the Nord Atom Syntax design which provides a clean, elegant and up-to-date syntax highlighting. (@arcticicestudio, #6, fff01790)
+
+### Language Support
+All previous supported language packages have been migrated to the new codebase and packages currently supported by Nord Atom Syntax have been added. (@arcticicestudio, #6, fff01790)
+
+### Documentation
+All project documentations adapted the new project setup and styles and new branding assets have been added. (@arcticicestudio, #7, bf226d6e)
+
 # 0.22.0 (2016-08-18)
 ## Improvements
 ### Language Support
