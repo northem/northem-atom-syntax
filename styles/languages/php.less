@@ -1,135 +1,40 @@
 /*
-+++++++++++++++++++++++++++++++++++++++++++
-title     Language "PHP"                  +
-project   northem-atom-syntax             +
-file      php.less                        +
-version   0.22.0                          +
-author    Arctic Ice Studio               +
-email     development@arcticicestudio.com +
-website   http://arcticicestudio.com      +
-copyright Copyright (C) 2016              +
-+++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+title      Language PHP Styles                                    +
+project    northem-atom-syntax                                    +
+repository https://github.com/arcticicestudio/northem-atom-syntax +
+author     Arctic Ice Studio                                      +
+email      development@arcticicestudio.com                        +
+copyright  Copyright (C) 2016                                     +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Defines all language specific syntax highlighting classes for "PHP".
+[Language Packages]
+  > language-php (https://atom.io/packages/language-php)
 
-[Index]
-  > Scope ".text.html.php"
-      Punctuation
-  > Scope ".source.php"
-      Comment
-      Entity
-      Keyword
-      Meta
-      Punctuation
-      Support
-      Storage
-      Variable
-
-[Atom Package Dependencies]
-  > language-php
-      https://atom.io/packages/language-php
+[References]
+PHP
+  (https://secure.php.net)
 */
-/*+------------------------+
-  + Scope ".text.html.php" +
-  +------------------------+*/
-.text.html.php {
-  color: @color-syntax-other;
-  /*+--- Punctuation ---+*/
-  .punctuation.embedded.section {
-    &.begin,
-    &.end {
-      color: @color-syntax-doctype;
-    }
-  }
-}
-
-/*+------------------------+
-  + Scope ".text.html.php" +
-  +------------------------+*/
 .source.php {
-  color: @color-syntax-other;
-  /*+--- Comment ---+*/
-  .comment {
-    color: @color-syntax-comment;
-  }
+  .meta {
+    &.function-call {
+      color: @syntax-color-function;
 
-  /*+--- Entity ---+*/
-  .entity.name {
-    &.type.class {
-      color: @color-syntax-class;
-    }
-    &.function {
-      color: @color-syntax-function;
-    }
-  }
-
-  /*+--- Keyword ---+*/
-  .keyword {
-    &.control {
-      color: @color-syntax-keyword;
-    }
-    &.operator {
-      color: @color-syntax-operator;
-    }
-  }
-
-  /*+--- Meta ---+*/
-  .meta.string-contents.quoted {
-    color: @color-syntax-string;
-  }
-
-  /*+--- Punctuation ---+*/
-  .punctuation {
-    &.definition {
-      &.parameters,
-      &.string {
-        &.begin,
-        &.end {
-          color: @color-syntax-symbol;
-        }
-      }
-      &.variable {
-        color: @color-syntax-keyword;
-      }
-      &.commment {
-        color: @color-syntax-comment;
+      &.static {
+        font-style: italic;
       }
     }
-    &.terminator {
-      color: @color-syntax-symbol;
-    }
-    &.section {
-      &.array,
-      &.scope {
-        &.begin,
-        &.end {
-          color: @color-syntax-symbol;
-        }
-      }
+
+    &.string-contents {
+      color: @syntax-color-string;
     }
   }
 
-  /*+--- Support ---+*/
-  .support.function {
-    color: @color-syntax-function;
+  .punctuation.definition.variable {
+    color: @syntax-color-keyword;
   }
 
-  /*+--- Storage ---+*/
-  .storage.type {
-    &.class,
-    &.function {
-      color: @color-syntax-keyword;
-    }
-  }
-
-  /*+--- Variable ---+*/
-  .variable {
-    color: @color-syntax-variable;
-
-    &.other.global.safer {
-      color: @color-syntax-keyword;
-      font-weight: bold;
-      font-style: italic;
-    }
+  .support.other.namespace.use {
+    color: @syntax-color-class;
   }
 }
